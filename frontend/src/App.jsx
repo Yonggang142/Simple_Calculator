@@ -1,5 +1,5 @@
 import { createContext, useState } from "react"
-
+import './App.css'
 
 function App() {
   const [output, setOutput] = useState("")
@@ -19,7 +19,7 @@ function App() {
       setEvaluated(true)
     } catch (error) {
 
-      setOutput("Error")
+      setOutput("invalid input")
       setEvaluated(true)
     }
   }
@@ -45,31 +45,34 @@ function App() {
     <>
       <div>
         <h1 className='Title'>
-          Calculator App
-          
+          Calculator
         </h1>
 
-        <h2 className='Output'>
-          {output}
-        </h2>
-      
-        <div>
-					<button className = "button" onClick={() => handleClick(0)}> 0 </button>
-					<button className = "button" onClick={() => handleClick(1)}> 1 </button>
-					<button className = "button" onClick={() => handleClick(2)}> 2 </button>
-					<button className = "button" onClick={() => handleClick(3)}> 3 </button>
-					<button className = "button" onClick={() => handleClick(4)}> 4 </button>
-					<button className = "button" onClick={() => handleClick(5)}> 5 </button>
-					<button className = "button" onClick={() => handleClick(6)}> 6 </button>
-					<button className = "button" onClick={() => handleClick(7)}> 7 </button>
-					<button className = "button" onClick={() => handleClick(8)}> 8 </button>
-					<button className = "button" onClick={() => handleClick(9)}> 9 </button>
-					<button className = "button" onClick={() => handleClick(10)}> + </button>
-					<button className = "button" onClick={() => handleClick(11)}> - </button>
-					<button className = "button" onClick={() => handleClick(12)}> * </button>
-					<button className = "button" onClick={() => handleClick(13)}> / </button>
-					<button className = "button" onClick={() => handleClick(14)}> = </button>
-    		</div>
+        <div className='Calculator'>
+        
+          <h2 className='Output'>
+            {output}
+          </h2>
+        
+          <div className='grid-container'>
+            <button className = "button" onClick={() => handleClick(0)}> 0 </button>
+            <button className = "button" onClick={() => handleClick(1)}> 1 </button>
+            <button className = "button" onClick={() => handleClick(2)}> 2 </button>
+            <button className = "button" onClick={() => handleClick(3)}> 3 </button>
+            <button className = "button" onClick={() => handleClick(4)}> 4 </button>
+            <button className = "button" onClick={() => handleClick(5)}> 5 </button>
+            <button className = "button" onClick={() => handleClick(6)}> 6 </button>
+            <button className = "button" onClick={() => handleClick(7)}> 7 </button>
+            <button className = "button" onClick={() => handleClick(8)}> 8 </button>
+            <button className = "button" onClick={() => handleClick(9)}> 9 </button>
+            <button className = "button" onClick={() => handleClick(10)}> + </button>
+            <button className = "button" onClick={() => handleClick(11)}> - </button>
+            <button className = "button" onClick={() => handleClick(12)}> × </button>
+            <button className = "button" onClick={() => handleClick(13)}> ÷ </button>
+            <button className = "button" onClick={() => handleClick(14)}> = </button>
+          </div>
+        </div>
+        
     
 
 
